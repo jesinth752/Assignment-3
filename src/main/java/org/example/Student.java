@@ -56,7 +56,11 @@ class GPA extends DET
           do {
               LOGGER.info("Enter new  Gpa:");
               temp= input.nextDouble();
-          } while (!(temp <= 10) || !(temp >= 1));
+                 if(temp>=10 && temp<=1)
+            {
+            break;
+            }
+          } while (true);
           update(temp);
           LOGGER.info("Updated successfully");
 
