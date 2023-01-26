@@ -16,8 +16,8 @@ class GPA extends DET
     String studname;
     String gradelvl;
 
-    double gpa;
-    double newgpa;
+    double gpapoint;
+    double temp;
 
     double val;
     String con;
@@ -34,12 +34,12 @@ class GPA extends DET
     LOGGER.info("your Gpa Must Be greater than 0 and less than 10");
         do {
             LOGGER.info("Enter Gpa:");
-            gpa = input.nextDouble();
-        } while (!(gpa <= 10) || !(gpa >= 1));
+            gpapoint= input.nextDouble();
+        } while (!(gpapoint<= 10) || !(gpapoint >= 1));
     }
-    double update(double newgpa)
+    double update(double temp)
     {
-       val=newgpa;
+       val=temp;
         set=1;
         return val;
     }
@@ -51,9 +51,9 @@ class GPA extends DET
           LOGGER.info("your Gpa Must Be greater than 0 and less than 10");
           do {
               LOGGER.info("Enter new  Gpa:");
-              newgpa= input.nextDouble();
-          } while (!(newgpa <= 10) || !(newgpa >= 1));
-          update(newgpa);
+              temp= input.nextDouble();
+          } while (!(newgpa <= 10) || !(temp >= 1));
+          update(temp);
           LOGGER.info("Updated successfully");
 
       }
@@ -65,11 +65,11 @@ class GPA extends DET
   }
   String display()
   {
-      String q=String.valueOf(gpa);
+      String q=String.valueOf(gpapoint);
 
       if(set==1) {
 
-          con = studname + " has a " + update(newgpa) + " Gpa";
+          con = studname + " has a " + update(temp) + " Gpa";
       }
       else{
           con = studname + " has a " + q + " Gpa";
@@ -99,8 +99,8 @@ public class  Student {
         {
             LOGGER.warning("update Terminated");
         }
-
-            LOGGER.info(call.display());
+             String result=call.display();
+            LOGGER.info(result);
 
     }
 }
