@@ -47,7 +47,7 @@ class GPA extends DET
         set=1;
         return val;
     }
-    void record(String recordname)
+    void Checkrecord(String recordname)
     {
 
       if(studname.equals(recordname))
@@ -101,7 +101,7 @@ public class  Student {
         {
             LOGGER.info("Enter student name:");
             String recordname=input.nextLine();
-            call.record(recordname);
+            call.Checkrecord(recordname);
         }
         else
         {
