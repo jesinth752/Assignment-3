@@ -35,7 +35,7 @@ class GPA extends DET
         do {
             LOGGER.info("Enter Gpa:");
             gpapoint= input.nextDouble();
-            if(gpapoint>=10 && gpapoint<=1)
+            if(gpapoint<=10 && gpapoint>=1)
             {
             break;
             }
@@ -56,7 +56,7 @@ class GPA extends DET
           do {
               LOGGER.info("Enter new  Gpa:");
               temp= input.nextDouble();
-                 if(temp>=10 && temp<=1)
+                 if(temp<=10 && temp>=1)
             {
             break;
             }
